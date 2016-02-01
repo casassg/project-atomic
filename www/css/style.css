@@ -1,1 +1,7 @@
 /* Empty. Add your own CSS if you like */
+.icon-detail {
+	float: left;
+	margin-right: 20px;
+	width: 100px;
+	height: auto;
+}

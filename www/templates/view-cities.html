@@ -1,8 +1,18 @@
-<ion-view view-title="Cities" >
+<ion-view view-title="City Weather" >
+	<ion-nav-buttons side="right">
+		<a data-tap-disabled="true" class="button button-icon icon " ng-click="toggleSearch();" ng-class="{'ion-android-close':search, 'ion-android-search':!search}"></a>
+	</ion-nav-buttons>
+
   <ion-content>
+		<div class="bar bar-header bar-stable item-input-inset" ng-show="search">
+			<label class="item-input-wrapper">
+				<input type="search" placeholder="Search">
+			</label>
+			<a data-tap-disabled="true" class="button button-icon icon ion-android-search" ng-click="search();"></a>
+		</div>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="city in cities" type="item-text-wrap" href="#/city/{{chat.id}}">
-        <h2>{{city.name}}</h2>
+      <ion-item class="item-remove-animate item-icon-right" ng-repeat="city in cities" type="item-text-wrap" href="#/city/{{city.id}}">
+				<h2>{{city.name}}</h2>
         <p>{{city.lastText}}</p>
         <i class="icon ion-chevron-right icon-accessory"></i>
 

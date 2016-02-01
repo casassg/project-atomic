@@ -1,7 +1,17 @@
-<ion-view view-title="{{city.name}}">
+<ion-view view-title="{{response.name}}">
   <ion-content class="padding">
-    <p>
-      {{chat.lastText}}
-    </p>
+		<div ng-if="{{error}}">
+			ERROR DE XARXA
+		</div>
+			<img class="icon-detail" width="50px" height="50px" ng-src="img/{{response.weather[0].icon}}.png"/>
+			<div>
+				<h1>
+					{{response.weather[0].main}}
+				</h1>	
+				<p>
+					City: {{response.name}}<br>
+					Details: {{response.weather[0].description}}
+				<p>
+		</div>
   </ion-content>
 </ion-view>
