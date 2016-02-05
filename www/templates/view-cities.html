@@ -6,9 +6,9 @@
   <ion-content>
 		<div class="bar bar-header bar-stable item-input-inset" ng-show="search">
 			<label class="item-input-wrapper">
-				<input type="search" placeholder="Search">
+				<input type="search" placeholder="Search" ng-model="query">
 			</label>
-			<a data-tap-disabled="true" class="button button-icon icon ion-android-search" ng-click="search();"></a>
+			<a data-tap-disabled="true" class="button button-icon icon ion-android-search" ng-click="startSearch(query);"></a>
 		</div>
     <ion-list>
       <ion-item class="item-remove-animate item-icon-right" ng-repeat="city in cities" type="item-text-wrap" href="#/city/{{city.id}}">
